@@ -6,7 +6,7 @@ import ListPage from "./views/List/ListPage";
 export default function App() {
   return (
     <Switch>
-      <Route path='/ingredients/:id'>
+      <Route path='/ingredients/:name'>
         <DetailPage />
       </Route>
       <Route path='/'>

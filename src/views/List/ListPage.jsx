@@ -32,11 +32,11 @@ export default function ListPage() {
       ) : (
         <section>
           {elixirs.map((elixir) => (
-            <article key={elixir.name}>
+            <article key={elixir.id}>
               <h2>{elixir.name}</h2>
               <p>{elixir.effect}</p>
               <p>{elixir.sideEffects}</p>
-              <Link to={`ingredients/${elixir.name}`}>
+              <Link to={`ingredients/${elixir.id}`}>
                 <p>Ingredients...</p>
               </Link>
             </article>
