@@ -1,0 +1,1 @@
+// test: MemoryRouter/initialEntries for details (event: click)
