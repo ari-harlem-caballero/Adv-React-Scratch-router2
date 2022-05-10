@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import style from './List.css';
 
 export default function ListPage() {
   // list elixirs (name, effect, possible side effect), link to ingredient detail page, (stretch: color code difficulty)
@@ -11,7 +12,6 @@ export default function ListPage() {
       const res = await fetch('https://wizard-world-api.herokuapp.com/Elixirs');
       const results = await res.json();
 
-      console.log(results);
       setElixirs(results);
       setLoading(false);
     }
@@ -32,10 +32,10 @@ export default function ListPage() {
       ) : (
         <section>
           {elixirs.map((elixir) => (
-            <article key={elixir.id}>
+            <article key={elixir.id} className={style[elixir.difficulty.toLowerCase()]}>
               <h2>{elixir.name}</h2>
-              <p>{elixir.effect}</p>
-              <p>{elixir.sideEffects}</p>
+              <p>Effects: {elixir.effect}</p>
+              <p>Possible Side Effects: {elixir.sideEffects}</p>
               <Link to={`ingredients/${elixir.id}`}>
                 <p>Ingredients...</p>
               </Link>
