@@ -1,0 +1,35 @@
+h1, h2 {
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+
+article {
+  border: 2px dotted black;
+  width: 180px;
+  margin: 5px;
+  padding: 10px;
+  text-overflow: inherit;
+}
+
+.unknown {
+  background-color: #d3d3d3a4;
+}
+
+.beginner {
+  background-color: #6dac1596;
+}
+
+.moderate {
+  background-color: rgba(232, 128, 17, 0.662);
+}
+
+.advanced {
+  background-color: rgba(206, 13, 13, 0.644);
+}
